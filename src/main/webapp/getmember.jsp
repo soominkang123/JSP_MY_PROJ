@@ -22,23 +22,23 @@
       <br><br>
       <form method = "post"action = "updateMember.do" >
      
-     <input type = "hidden" name = "ID" value = "<%= member.getID() %>">
+     <input type = "hidden" name = "ID" value = "<%= member.getId() %>">
      
       <table border="1" width = "700px" cellpadding = "10px" >
              <tr><td bgcolor="skyblue" align = "center"> 아이디 </td> 
-             <td> <input type= "text" name = "title" value="<%= member.getID()%>"> </td>
+             <td> <input type= "text" name = "title" value="<%= member.getId()%>"> </td>
              </tr>
              
              <tr><td bgcolor="skyblue" align = "center"> 비밀번호 </td> 
-             <td> <input type= "text" name = "title" value="<%= member.getPASSWORD()%>"> </td>
+             <td> <input type= "text" name = "title" value="<%= member.getPassword()%>"> </td>
              </tr>
              
              <tr><td bgcolor="skyblue" align = "center"> 폰번호 </td> 
-             <td> <input type= "text" name = "title" value="<%= member.getPHONE()%>"> </td>
+             <td> <input type= "text" name = "title" value="<%= member.getPhone()%>"> </td>
              </tr>
              
              <tr><td bgcolor="skyblue" align = "center"> 이메일 </td> 
-             <td> <input type= "text" name = "title" value="<%= member.getEMAIL()%>"> </td>
+             <td> <input type= "text" name = "title" value="<%= member.getEmail()%>"> </td>
              </tr>
              
              <tr><td bgcolor="skyblue" align = "center"> 가입일 </td> 
@@ -50,7 +50,7 @@
              </tr>
              
              <tr><td bgcolor="skyblue" align = "center"> 회원역할 </td> 
-             <td> <input type= "text" name = "title" value="<%= member.getROLE()%>"> </td>
+             <td> <input type= "text" name = "title" value="<%= member.getRole()%>"> </td>
              </tr>
              
               <tr><td colspan = "2" align = "center"> <input type="submit" value= "글 수정하기"> </td> 
@@ -61,10 +61,10 @@
      </form>
 
        <br><br>
-       <a href = "deleteMember.do?ID=<%= member.getID()%>" >
+       <a href = "deleteMember.do?ID=<%= member.getId()%>" >
          글 삭제
          </a>
-
+     
 
 
 

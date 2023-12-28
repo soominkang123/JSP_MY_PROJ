@@ -50,9 +50,9 @@ public class Member_Controller extends HttpServlet {
 			
 			
 			MemberDTO dto = new MemberDTO();
-			dto.setPASSWORD(password);
-			dto.setPHONE(phone);
-			dto.setEMAIL(email);
+			dto.setPassword(password);
+			dto.setPhone(phone);
+			dto.setEmail(email);
 			
 			
 			MemberDAO dao = new MemberDAO();
@@ -85,12 +85,12 @@ public class Member_Controller extends HttpServlet {
 			String ID = request.getParameter("ID");
 			
 			MemberDTO dto = new MemberDTO();
-			dto.setID(ID);
+			dto.setId(ID);
 						
 			MemberDAO dao = new MemberDAO();
 			
 			MemberDTO member = new MemberDTO();
-			dto.setID(ID);
+			dto.setId(ID);
 			
 			// 4. 뷰 페이지 전송
 			HttpSession session = request.getSession();

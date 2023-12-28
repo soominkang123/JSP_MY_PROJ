@@ -7,13 +7,13 @@ import lombok.Data;
 @Data
 public class MemberDTO {
 
-	private String ID;
-	private String PASSWORD;
-	private String PHONE;
-	private String EMAIL;
+	private String id;
+	private String password;
+	private String phone;
+	private String email;
 	private Date regdate;
 	private String addr;
-	private String ROLE;
+	private String role;
 
 	
 	

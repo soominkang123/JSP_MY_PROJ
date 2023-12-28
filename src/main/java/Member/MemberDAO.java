@@ -17,9 +17,9 @@ public class MemberDAO {
 	
 	private final String MEMBER_LIST = "select*from member order by id desc";
 	
-	private final String MEMBER_GET = "select * from member where seq = ?";
+	private final String MEMBER_GET = "select * from member where id = ?";
 	
-	private final String MEMBER_UPDATE = "update member set title= ? , write= ? , content= ? where seq= ?";
+	private final String MEMBER_UPDATE = "update member set title= ? , write= ? , content= ? where id= ?";
 	
 	private final String MEMBER_DELETE = "delete member where id = ?";
 	
@@ -33,9 +33,9 @@ public class MemberDAO {
 			conn = JDBCUtil.getConnection();
 			pstmt = conn.prepareStatement(MEMBER_INSERT);
 		
-		 pstmt.setString(1, dto.getPASSWORD());
-		 pstmt.setString(2, dto.getPHONE());
-		 pstmt.setString(3, dto.getEMAIL());
+		 pstmt.setString(1, dto.getPassword());
+		 pstmt.setString(2, dto.getPhone());
+		 pstmt.setString(3, dto.getEmail());
 		 
 		 pstmt.executeUpdate();
 		 
@@ -66,13 +66,13 @@ public class MemberDAO {
 		while (rs.next()) {
 			
 		MemberDTO member = new MemberDTO();
-		member.setID(rs.getString("ID"));
-		member.setPASSWORD(rs.getString("PASSWORD"));
-		member.setPHONE(rs.getString("PHONE"));
-		member.setEMAIL(rs.getString("EMAIL"));
+		member.setId(rs.getString("ID"));
+		member.setPassword(rs.getString("PASSWORD"));
+		member.setPhone(rs.getString("PHONE"));
+		member.setEmail(rs.getString("EMAIL"));
 		member.setRegdate(rs.getDate("REGDATE"));
 		member.setAddr(rs.getString("ADDR"));
-		member.setROLE(rs.getString("ROLE"));
+		member.setRole(rs.getString("ROLE"));
 		
 		memberList.add(member);
 		

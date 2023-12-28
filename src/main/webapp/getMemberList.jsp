@@ -36,16 +36,16 @@ try {
 		for (MemberDTO m : memberList) {
 		%>	
 		<tr>
-		   <td align= "center"> <%=m.getID()%></td>
+		   <td align= "center"> <%=m.getId()%></td>
 		   
-		   <td><a href="getMember.do?id = <%= m.getID() %>"><%= m.getPASSWORD() %>
+		   <td><a href="getMember.do?id = <%= m.getId() %>"><%= m.getPassword() %>
 		   aa</a></td>
 		   
-		   <td><%=m.getPHONE() %></td>
-		   <td><%=m.getEMAIL() %></td>
+		   <td><%=m.getPhone() %></td>
+		   <td><%=m.getEmail() %></td>
 		   <td><%=m.getRegdate() %></td>
 		   <td><%=m.getAddr() %></td>
-		   <td><%=m.getROLE() %></td>
+		   <td><%=m.getRole() %></td>
 		</tr>
 			
        <%
